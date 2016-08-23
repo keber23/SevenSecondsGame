@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="SevenSecondsGame.Views.QuestionPage"
+             Title="Question">
+
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+   
+
+    <Label Text="{Binding Question}" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+
+    <Label Text="{Binding TimeLeft}" FontSize="20"  HorizontalOptions="CenterAndExpand" />
+
+    <Button Text="Start" Command="{Binding StartQuestionCommand}" IsVisible="{Binding IsVisible}" />
+
+  </StackLayout>
+</ContentPage>

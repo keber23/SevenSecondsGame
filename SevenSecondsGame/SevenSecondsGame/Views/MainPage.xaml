@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="SevenSecondsGame.Views.MainPage"
+             Title="MainPage">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+    <Entry Placeholder="Pierwszy gracz" Text="{Binding FirstPlayer}" />
+    <Entry Placeholder="Drugi gracz" Text="{Binding SecondPlayer}" />
+    <Entry Placeholder="Trzeci gracz" Text="{Binding ThirdPlayer}" />
+    <Entry Placeholder="Czwarty gracz" Text="{Binding FourthPlayer}" />
+
+    <Button Text="Start gry" Command="{Binding StartGameCommand}" />
+    
+  </StackLayout>
+</ContentPage>
