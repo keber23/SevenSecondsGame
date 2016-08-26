@@ -15,20 +15,18 @@ namespace SevenSecondsGame
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage");
+            NavigationService.NavigateAsync("ResultsPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<BeforeQuestionPage>();
-
-
+            
             Container.RegisterTypeForNavigation<QuestionPage>();
             Container.RegisterTypeForNavigation<RateQuestionPage>();
 
-
-
+            Container.RegisterTypeForNavigation<ResultsPage>();
         }
     }
 }

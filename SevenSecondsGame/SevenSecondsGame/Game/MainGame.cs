@@ -43,6 +43,21 @@ namespace SevenSecondsGame.Game
             return players[current].Name;
         }
 
+        public List<string> GetPlayersScores()
+        {
+            var result = new List<string>();
+
+            if (players != null)
+            {
+                foreach (var player in players.OrderByDescending(p => p.Score))
+                {
+                    result.Add(player.Name + ": " + player.Score);
+                }
+            }
+
+            return result;
+        }
+
         internal bool CheckWinner()
         {
             //check if current user is winner
