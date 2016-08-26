@@ -39,11 +39,11 @@ namespace SevenSecondsGame.ViewModels
 
                 if (App.Game.CheckWinner())
                 {
-                    var name = App.Game.GetCurrentPlayer();
+                    //var name = App.Game.GetCurrentPlayer();
 
-                    _dialogService.DisplayAlertAsync("Mamy wygranego", "A jest nim: " + name, "OK");
+                    //_dialogService.DisplayAlertAsync("Mamy wygranego", "A jest nim: " + name, "OK");
 
-                    _navigationService.NavigateAsync("MainPage");
+                    _navigationService.NavigateAsync("ResultsPage");
 
                     //App.Current.MainPage.Navigation.
 

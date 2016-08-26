@@ -43,6 +43,7 @@
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\QuestionPageViewModel.cs" />
     <Compile Include="ViewModels\RateQuestionPageViewModel.cs" />
+    <Compile Include="ViewModels\ResultsPageViewModel.cs" />
     <Compile Include="Views\BeforeQuestionPage.xaml.cs">
       <DependentUpon>BeforeQuestionPage.xaml</DependentUpon>
     </Compile>
@@ -51,6 +52,9 @@
     </Compile>
     <Compile Include="Views\RateQuestionPage.xaml.cs">
       <DependentUpon>RateQuestionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultsPage.xaml.cs">
+      <DependentUpon>ResultsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\RateQuestionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ResultsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

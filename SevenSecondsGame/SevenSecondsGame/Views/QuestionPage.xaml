@@ -12,7 +12,7 @@
 
     <Label Text="{Binding Question}" FontSize="20" HorizontalOptions="CenterAndExpand"/>
 
-    <Label Text="{Binding TimeLeft}" FontSize="20"  HorizontalOptions="CenterAndExpand" />
+    <Label Text="{Binding TimeLeft}" FontSize="20" HorizontalOptions="CenterAndExpand"  IsVisible="{Binding TimeIsVisible}" />
 
     <Button Text="Start" Command="{Binding StartQuestionCommand}" IsVisible="{Binding IsVisible}" />
 

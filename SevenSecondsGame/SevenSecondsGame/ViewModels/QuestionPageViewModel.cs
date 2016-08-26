@@ -34,7 +34,12 @@ namespace SevenSecondsGame.ViewModels
             set { SetProperty(ref _isVisible, value); }
         }
 
-        //public DelegateCommand StartQuestionCommand { get; set; }
+        private bool _timeIsVisible;
+        public bool TimeIsVisible
+        {
+            get { return _timeIsVisible; }
+            set { SetProperty(ref _timeIsVisible, value); }
+        }
 
         public QuestionPageViewModel(INavigationService navigationService)
         {
@@ -47,6 +52,7 @@ namespace SevenSecondsGame.ViewModels
             StartQuestionCommand = new DelegateCommand(StartQuestion);
 
             IsVisible = true;
+            TimeIsVisible = false;
         }
 
         public DelegateCommand StartQuestionCommand { get; set; }
@@ -54,6 +60,7 @@ namespace SevenSecondsGame.ViewModels
         private void StartQuestion()
         {
             IsVisible = false;
+            TimeIsVisible = true;
 
             Device.StartTimer(TimeSpan.FromSeconds(1), () => {
                 var number = float.Parse(TimeLeft) - 1;
